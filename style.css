@@ -1,3 +1,35 @@
 h1{
     text-align: center;
 }
+input[type="number"]{
+    margin-right:20px;
+    font-size:30px;
+}
+
+input[type="datetime-local"]{
+    margin-right:20px;
+    font-size:30px;
+}
+
+input[type="submit"]{
+    font-size:30px;
+}
+
+select[name=""]{
+    margin-right:20px;
+    font-size:30px;
+}
+
+body{
+    font-size:30px;
+}
+
+.ef_car{
+    height: 65px;
+
+}
+
+footer{
+    color: rgb(144, 4, 209);
+    margin-top: 700px;
+}
