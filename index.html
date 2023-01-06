@@ -8,27 +8,45 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <div class="container">
     <h1>Карточка главного технолога</h1>
-    <form action="">
-        Номер партии:
-        <input type="number" min="0">
-        Вид сырья:
-        <select name="" id="">
-            <option value="">Сельдь</option>
-            <option value="">Скумбрия</option>
-            <option value="">Форель</option>
-            <option value="">Кета</option>
-            <option value="">Горбуша</option>
-        </select>
-        Вес:
-        <input type="number" min="0">
-        Дата:
-        <input type="datetime-local"><br>
-        <input type="submit"><br>
-          
-    <footer><marquee direction="right"><img class="ef_car" src="images/ef_car.png"></marquee><br></footer>
-        
-    </form>
-    
+        <form action="">
+            <table>
+                <tr>
+                    <td>Номер партии:</td>
+                    <td><input type="number" min="0"></td>
+                </tr>
+                <tr>
+                    <div id="fishes">
+                            <td>Вид сырья:</td>
+                            <td> <select name="" id="">
+                                <option value="">Сельдь</option>
+                                <option value="">Скумбрия</option>
+                                <option value="">Форель</option>
+                                <option value="">Кета</option>
+                                <option value="">Горбуша</option>
+                            </select></td>
+                        </tr>
+                        <tr>
+                            <td>Вес:</td>
+                            <td><input type="number" min="0"></td>
+                        </tr>
+                </div>
+                <tr>
+                    <td>Дата:</td>
+                    <td><input type="datetime-local"></td>
+                </tr>
+
+            </table>
+            <div id="add_fish">+</div>
+           
+            <br>
+            <input type="submit"><br>
+            
+        <footer><marquee direction="right"><img class="ef_car" src="images/ef_car.png"></marquee><br></footer>
+            
+        </form>
+    </div>
+    <script src = "script.js"></script>
 </body>
 </html>

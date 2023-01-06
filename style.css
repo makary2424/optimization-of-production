@@ -33,3 +33,27 @@ footer{
     color: rgb(144, 4, 209);
     margin-top: 700px;
 }
+
+.container{
+    width: 80%;
+    background-color:bisque;
+    padding: 30px;
+    margin: 0 auto;
+}
+
+#add_fish{
+    cursor: pointer;
+    border-radius: 170px;
+    border: 1px solid white;
+    font-size: 40px;
+    padding: 10px 20px;
+    background-color: tomato;
+    color: white;
+    transition: 0.3s;
+    display:inline-block;
+
+}
+#add_fish:hover{
+    background-color: rgb(181, 67, 46);
+    transition: 0.3s;
+}
