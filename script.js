@@ -9,50 +9,52 @@ const createOption = value => {
   return $option;
 };
 
-
+let date = document.getElementById("date");
 var f_types = ["Сельдь", "Скумбрия", "Форель", "Кета", "Горбуша"];
 
 function addFish(){
     let tr = document.createElement('tr');
+    tr.classList.add("fish_type");
     let td1 = document.createElement('td');
     let td2 = document.createElement('td');
     td1.appendChild(document.createTextNode('Вид сырья:'));
     let val;  
-    var $select = document.createElement('select');
-    for (val of f_types);
+    var select = document.createElement('select');
+    for (val of f_types)
     {
-    $option = createOption(val);
-    $select.appendChild($option);
+        option = createOption(val);
+        select.appendChild(option);
     }
-    td2.appendChild($select);
+    td2.appendChild(select);
     tr.appendChild(td1);
     tr.appendChild(td2);
-    let last_fish = document.getElementsByClassName('fish_type')[0];
-    last_fish.parentNode.insertBefore(tr, last_fish.nextSibling);
+    date.parentNode.insertBefore(tr,date);
     
 }
 function fishWeight(){
     let tr2 = document.createElement("tr");
+    tr2.classList.add("fish_weight");
     let td12 = document.createElement('td');
     let td22 = document.createElement('td');
     td12.appendChild(document.createTextNode("Вес:"));
     td22.appendChild(document.createElement("input"));
     tr2.appendChild(td12);
     tr2.appendChild(td22);
-    let last_fish = document.getElementsByClassName('fish_weight')[0];
-    last_fish.parentNode.insertBefore(tr2, last_fish.nextSibling);
+    date.parentNode.insertBefore(tr2,date);
+    
 }
 
 function number(){
     let tr3 = document.createElement("tr");
+    tr3.classList.add('number')
     let td13 = document.createElement('td');
     let td23 = document.createElement('td');
-    td13.appendChild(document.createTextNode("Вес:"));
+    td13.appendChild(document.createTextNode("Номер партии:"));
     td23.appendChild(document.createElement("input"));
     tr3.appendChild(td13);
     tr3.appendChild(td23);
-    let last_fish = document.getElementsByClassName('number')[0];
-    last_fish.parentNode.insertBefore(tr3, last_fish.nextSibling);
+
+    date.parentNode.insertBefore(tr3,date);
 
 
 }
@@ -61,6 +63,7 @@ function addItem(){
     number();
     addFish();
     fishWeight();
+
     
     
 }
