@@ -41,19 +41,23 @@ footer{
     margin: 0 auto;
 }
 
-#add_fish{
-    cursor: pointer;
-    border-radius: 170px;
-    border: 1px solid white;
-    font-size: 40px;
-    padding: 10px 20px;
-    background-color: tomato;
-    color: white;
-    transition: 0.3s;
-    display:inline-block;
-
+#send{
+    background-color: hsl(240, 73%, 39%);
+    border: 0px;
+    width: 428px;
 }
-#add_fish:hover{
-    background-color: rgb(181, 67, 46);
-    transition: 0.3s;
+td{
+    padding: 5px;
+}
+#date-time{
+    width: 375px;
+    display: inline-block;
+    padding-bottom: 14px;
+}
+#date-time{
+    height: 50px;
+}
+
+#add_fish{
+    margin-right: 5px;
 }

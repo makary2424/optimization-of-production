@@ -1,5 +1,5 @@
-let btn = document.getElementById("add_fish");
 
+let number = 1;
 
 
 const createOption = value => {
@@ -12,59 +12,31 @@ const createOption = value => {
 let date = document.getElementById("date");
 var f_types = ["Сельдь", "Скумбрия", "Форель", "Кета", "Горбуша"];
 
-function addFish(){
+
+let fishTable = document.getElementById('fish')
+function addItem(){
     let tr = document.createElement('tr');
-    tr.classList.add("fish_type");
-    let td1 = document.createElement('td');
-    let td2 = document.createElement('td');
-    td1.appendChild(document.createTextNode('Вид сырья:'));
-    let val;  
+    td1 = document.createElement('td');
+    td1.appendChild(document.createTextNode(number));
+    td2 = document.createElement('td');
     var select = document.createElement('select');
+    select.classList.add("form-control");
     for (val of f_types)
     {
         option = createOption(val);
         select.appendChild(option);
     }
     td2.appendChild(select);
+    td3 = document.createElement('td');
+    input = document.createElement('input')
+    input.classList.add("form-control");
+    td3.appendChild(input);
     tr.appendChild(td1);
     tr.appendChild(td2);
-    date.parentNode.insertBefore(tr,date);
+    tr.appendChild(td3);
+    fishTable.appendChild(tr);
+    number += 1;
     
 }
-function fishWeight(){
-    let tr2 = document.createElement("tr");
-    tr2.classList.add("fish_weight");
-    let td12 = document.createElement('td');
-    let td22 = document.createElement('td');
-    td12.appendChild(document.createTextNode("Вес:"));
-    td22.appendChild(document.createElement("input"));
-    tr2.appendChild(td12);
-    tr2.appendChild(td22);
-    date.parentNode.insertBefore(tr2,date);
-    
-}
-
-function number(){
-    let tr3 = document.createElement("tr");
-    tr3.classList.add('number')
-    let td13 = document.createElement('td');
-    let td23 = document.createElement('td');
-    td13.appendChild(document.createTextNode("Номер партии:"));
-    td23.appendChild(document.createElement("input"));
-    tr3.appendChild(td13);
-    tr3.appendChild(td23);
-
-    date.parentNode.insertBefore(tr3,date);
-
-
-}
-
-function addItem(){
-    number();
-    addFish();
-    fishWeight();
-
-    
-    
-}
+let btn = document.getElementById("add_fish");
 btn.addEventListener("click", addItem);
